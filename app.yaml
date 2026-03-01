@@ -1,0 +1,13 @@
+name: purge-orchestrator
+region: nyc
+services:
+  - name: api
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 8080
+    dockerfile_path: Dockerfile
+    source:
+      github:
+        repo: your-username/your-repo-name
+        branch: main
+        deploy_on_push: true
